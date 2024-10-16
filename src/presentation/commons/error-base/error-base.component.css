@@ -1,0 +1,61 @@
+.error_wrapper
+{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error_card
+{
+    width: 39rem;
+    height: 39rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 30px;
+}
+.error_card img
+{
+    width: 10rem;
+}
+.error_card h2
+{
+    font-family: var(--main_font);
+    font-size: 2.5rem;
+    font-weight: 700;
+
+}
+
+.error_card p
+{
+    font-family: var(--main_font);
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: justify;
+    max-width: 30rem;
+    max-height: 6rem;
+}
+
+.error_card button
+{
+    margin-top: 3rem;
+    background-color: var(--menu-color);
+    color: white;
+    font-family: var(--main_font);
+    width: 15rem;
+    height: 4rem;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.error_card button:hover
+{
+    background-color: var(--hover_color);
+}

@@ -1,0 +1,75 @@
+<section class="description">
+  <h2>Monitoreamos cambios en los precios de tus productos favoritos</h2>
+  <h3>... para que, cuando cambien, ¡puedas comprarlos al mejor precio!"</h3>
+</section>
+<section class="card">
+  <div>
+    <figure>
+      <img src="assets/icons/icon_url.png" alt="Url" />
+    </figure>
+    <article>
+      <p>
+        <strong>Introduce la dirección URL</strong><br />del sitio web donde se
+        encuentra el producto que deseas monitorear.
+      </p>
+    </article>
+    <img class="img_next" src="assets/icons/icon_next.png" alt="" />
+  </div>
+  <div>
+    <figure>
+      <img src="assets/icons/icon_input .png" alt="Frecuencia" />
+    </figure>
+    <article>
+      <p>
+        <strong>Introduce tu correo</strong><br />Donde llegaran los cambios
+        monitoreados a tu producto
+      </p>
+    </article>
+    <img class="img_next" src="assets/icons/icon_next.png" alt="" />
+  </div>
+  <div>
+    <figure>
+      <img src="assets/icons/icon_email.png" alt="Notificaciones" />
+    </figure>
+    <article>
+      <p>
+        <strong>Recibe notificaciones</strong><br />en tu correo cada vez que
+        detectemos un cambio en el precio
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="monitor">
+  <div class="page_url">
+    <input
+      type="text"
+      id="url_input"
+      placeholder="Introduce la URL"
+      required="required"
+      #urlInput
+    />
+    <button class="button_style" id="capture" (click)="scannUrl(urlInput)">
+      Escanear producto
+    </button>
+  </div>
+</section>
+
+<app-confirm-product-notification
+  *ngIf="notificationRef === 1"
+></app-confirm-product-notification>
+
+<app-create-image-notification
+  *ngIf="notificationRef === 2"
+></app-create-image-notification>
+
+<app-more-than-one-product
+  *ngIf="notificationRef === 3"
+></app-more-than-one-product>
+
+<app-priceless-product *ngIf="notificationRef === 4"></app-priceless-product>
+<app-advertising-on-image
+  *ngIf="notificationRef === 5" 
+></app-advertising-on-image>
+<app-is-not-ecommerce *ngIf="notificationRef === 6"></app-is-not-ecommerce>
+<app-loader *ngIf="isLoading"> </app-loader>

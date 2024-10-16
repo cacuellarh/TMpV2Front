@@ -1,0 +1,62 @@
+header {
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: -1px 3px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+header h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+ .container_privacy {
+    margin: 0 32rem 5rem;
+}
+
+ .container_privacy h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+ .container_privacy p {
+    text-align: justify;
+    font-size: 1.1rem;
+    color: #939393;
+}
+
+@media screen and (max-width: 1550px) {
+     .container_privacy {
+        margin: 0 25rem 5rem;
+    }    
+}
+
+@media screen and (max-width: 990px) {
+     .container_privacy {
+        margin: 0 20rem 5rem;
+    }  
+}
+
+@media screen and (max-width: 576px) {
+     header {
+        padding: 1rem 0;
+    }
+
+     header h2 {
+        font-size: 1.5rem;
+    }
+
+     .container_privacy {
+        margin: 0 2rem 2rem;
+    }
+
+     .container_privacy h3 {
+        font-size: 1.2rem;
+        padding: 1.5rem 0;
+    }
+
+     .container_privacy p {
+        font-size: 0.9rem;
+    }
+}

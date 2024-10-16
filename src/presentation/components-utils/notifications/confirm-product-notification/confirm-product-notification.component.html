@@ -1,0 +1,46 @@
+<div class="modal_window" id="modal_email_confirm">
+  <div class="modal_container modal_container_medium">
+    <h2 class="description_title">Escaneo de producto realizado correctamente.</h2>
+
+    <div class="product_details">
+      <div class="details_info">
+        <span>Descripción:</span>
+        <h5>{{ valueRef.value.descripcion }}</h5>
+
+      </div>
+      <div class="details_info">
+        <span>Precio:</span><h5>${{ valueRef.value.precio}}</h5>
+
+      </div>
+      <div class="details_info">
+        
+        <span>Descuento</span><h5>{{ valueRef.value.descuento }}</h5>
+      </div>
+  
+    <div class="form_product"> 
+
+      <p class="info_form">Comienza a monitorear tu producto ingresando tu correo electrónico para recibir notificaciones cuando el precio cambie.</p>
+      <form action="" [formGroup]="formImageTrack" (ngSubmit)="create()">
+        <input
+          type="email"
+          id="email"
+          placeholder="Introduce tu correo"
+          required="required"
+          formControlName="email"
+          class="page_url"
+        />
+  
+        <button class="button_style" type="submit">Monitorear</button>       
+      </form>
+
+      <div *ngIf="(formImageTrack.get('email')?.invalid && (formImageTrack.get('email')?.touched || formSubmitted))">
+        <div class="validation_message" *ngIf="formImageTrack.get('email')?.hasError('required')">
+          El email es obligatorio.
+        </div>
+        <div class="validation_message" *ngIf="formImageTrack.get('email')?.hasError('email')">
+          El formato del email no es válido.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
